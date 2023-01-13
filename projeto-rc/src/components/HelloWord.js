@@ -1,4 +1,4 @@
-import Frase from "./Frase"
+
 function HelloWord(){
 
     return(
@@ -6,7 +6,7 @@ function HelloWord(){
             <h1>
                 Meu primeiro component
             </h1>
-            <Frase/>
+            
         </div>
     )
 
