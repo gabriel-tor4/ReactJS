@@ -1,6 +1,9 @@
 import './App.css';
+import { useState } from "react"
+import SeuNome from './components/State-list/SeuNome';
+import Saudacao from './components/State-list/Saudacao.js';
 //import Condicional from './components/Condicional/Condicional';
-import OutraLista from './components/Forms-list/OutraLista';
+//import OutraLista from './components/Forms-list/OutraLista';
 //import HelloWord from './components/Testes/HelloWord';
 //import SayMyName from './components/Testes/SayMyName';
 //import Pessoa from './components/Testes/Pessoa';
@@ -10,21 +13,17 @@ import OutraLista from './components/Forms-list/OutraLista';
 //import Form from './components/Forms-list/Form';
 function App() {
 
-  const Meusitens = ["React", "angualar", "Vue",]
+  const [nome, setnome] = useState()
 
 
-  return (
-    <div className="App">
-      <h1>
-        Renderização de listas
-      </h1>
+  return (<div className="App">
 
-      <p/>
-      <OutraLista itens={Meusitens}></OutraLista>
-      <OutraLista itens={ []}/>
-    </div>
+    <h1>State Lift</h1>
+    <SeuNome setnome={setnome} />
+    {nome}
+    <Saudacao nome={nome} />
 
-  );
+  </div>);
 
 }
 
